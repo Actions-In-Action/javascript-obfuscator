@@ -30,10 +30,13 @@ fi
 
 echo "gitee_tag: ${gitee_tag}"
 
+
 if ! [[ "${gitee_tag}" =~ '"commit"' ]]; then
+if ! [[ "${gitee_tag}" == '[]' ]]; then
     echo "checking gitee tag failed"
 
     exit 1 
+fi  
 fi  
 
 
