@@ -127,6 +127,7 @@ git config user.name "${SECRETS_GITEE_USERNAME}"
 
 rm -rf static
 rm -rf workers
+rm -rf js
 rm ./*.html
 
 cp -r ../static-build/* ./
