@@ -62,18 +62,18 @@ npm run updatesemantic
 cd ..
 
 mkdir static-build
-mkdir -p static-build/js/static/dist/stylesheets
-mkdir -p static-build/js/static/images
-mkdir -p static-build/js/static/semantic/assets/fonts
-mkdir -p static-build/js/workers
+mkdir -p static-build/static/dist/stylesheets
+mkdir -p static-build/static/images
+mkdir -p static-build/static/semantic/assets/fonts
+mkdir -p static-build/workers
 
 
 mv javascript-obfuscator-ui/dist/index.html static-build/
-mv javascript-obfuscator-ui/dist/bundle.js* static-build/js/static/dist/
-mv javascript-obfuscator-ui/dist/stylesheets/* static-build/js/static/dist/stylesheets/
-mv javascript-obfuscator-ui/dist/workers/* static-build/js/workers/
-mv javascript-obfuscator-ui/public/images/* static-build/js/static/images/
-mv javascript-obfuscator-ui/public/semantic/assets/fonts/* static-build/js/static/semantic/assets/fonts/
+mv javascript-obfuscator-ui/dist/bundle.js* static-build/static/dist/
+mv javascript-obfuscator-ui/dist/stylesheets/* static-build/static/dist/stylesheets/
+mv javascript-obfuscator-ui/dist/workers/* static-build/workers/
+mv javascript-obfuscator-ui/public/images/* static-build/static/images/
+mv javascript-obfuscator-ui/public/semantic/assets/fonts/* static-build/static/semantic/assets/fonts/
 
 # cdn
 find static-build/ -name "*.css" | xargs sed -i -e 's/fonts\.googleapis\.com/fonts\.dogedoge\.com/g'
